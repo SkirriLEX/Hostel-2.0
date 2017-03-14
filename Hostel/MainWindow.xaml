@@ -1,0 +1,16 @@
+﻿<Window x:Class="Hostel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hostel"
+        mc:Ignorable="d"
+        Title="Hotel Administrator" Height="500" Width="400" MouseDoubleClick="Window_MouseDoubleClick" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" BorderBrush="{DynamicResource {x:Static SystemColors.DesktopBrushKey}}">
+    <Window.Background>
+        <ImageBrush ImageSource="resurse/BackgoundLoadForm.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Label x:Name="WelcomeText" Width="321" Content="Welcome in Hotel &#10; Administrator" HorizontalAlignment="Left" Margin="50,296,0,0" VerticalAlignment="Top" FontFamily="SimSun" FontSize="36" FontWeight="Bold" Height="107" />
+
+    </Grid>
+</Window>

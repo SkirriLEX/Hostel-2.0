@@ -1,0 +1,25 @@
+﻿<Window x:Class="Hostel.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hostel"
+        mc:Ignorable="d"
+Title="Registration" Height="500" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="resurse/NewUser.png" Stretch="Uniform" Opacity="0.5"/>
+        </Grid.Background>
+        <Label x:Name="Label_Login" Content="Login" HorizontalAlignment="Left" Margin="67,199,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_Password" Content="Password" HorizontalAlignment="Left" Margin="67,240,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_RPassword" Content="RPassword" HorizontalAlignment="Left" Margin="67,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Login_text" HorizontalAlignment="Left" Height="23" Margin="147,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="183"/>
+        <PasswordBox x:Name="Password_text" HorizontalAlignment="Left" Margin="147,244,0,0" VerticalAlignment="Top" Width="183" Height="22" PasswordChar="*" Password=""/>
+        <PasswordBox x:Name="RPassword_text" HorizontalAlignment="Left" Margin="147,285,0,0" VerticalAlignment="Top" Width="183" Height="22" PasswordChar="*" Password=""/>
+        <Button x:Name="Reg_Butt" Content="Registration" HorizontalAlignment="Left" Margin="67,348,0,0" VerticalAlignment="Top" Width="81" Height="31" Click="Reg_Butt_Click"/>
+        <Button x:Name="Cancel_Butt" Content="Cancel" HorizontalAlignment="Left" Margin="255,348,0,0" VerticalAlignment="Top" Width="75" Height="31" Click="Cancel_Butt_Click"/>
+        <Label x:Name="label" Content="                Please&#10; Enter Login and Password" HorizontalAlignment="Left" Margin="84,45,0,0" VerticalAlignment="Top" Width="264" FontSize="20" Height="72" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

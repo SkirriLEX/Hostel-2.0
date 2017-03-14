@@ -1,0 +1,13 @@
+﻿<Window x:Class="Hostel.QerrySelectorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hostel"
+        mc:Ignorable="d"
+        Title="QuerryWindow" Height="285.437" Width="290.291">
+    <Grid>
+        <Button Name="hz" Content="H" Height="67" Margin="0,0,78,47" HorizontalAlignment="Right" Width="153" VerticalAlignment="Bottom"/>
+        <TextBox Margin="25,12,78,205"/>
+    </Grid>
+</Window>
