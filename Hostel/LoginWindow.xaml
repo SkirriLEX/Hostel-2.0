@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hostel"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="500" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" >
+        Title="LoginWindow" Height="500" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" KeyDown="Window_KeyEscDown" Closing="Window_Closing">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="resurse/Lock.png" Stretch="Uniform" Opacity="0.3"/>
@@ -13,10 +13,10 @@
         <Label x:Name="WelcomeLabel" Content="Welcome" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Width="190" FontSize="36"/>
         <Label x:Name="Label_Login" Content="Login" HorizontalAlignment="Left" Margin="70,265,0,0" VerticalAlignment="Top" MouseDoubleClick="Label_Login_MouseDoubleClick"/>
         <Label x:Name="Label_Password" Content="Password" HorizontalAlignment="Left" Margin="70,306,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Login_text" HorizontalAlignment="Left" Height="23" Margin="135,269,0,0" TextWrapping="Wrap" Text="{Binding Path=Setlog, Mode=TwoWay}" VerticalAlignment="Top" Width="203"/>
-        <PasswordBox x:Name="Password_text" HorizontalAlignment="Left" Margin="135,310,0,0" VerticalAlignment="Top" Width="203" Height="22" PasswordChar="*" Password=""/>
-        <CheckBox Content="Remember me" HorizontalAlignment="Left" Margin="135,337,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=SetRem, Mode=TwoWay}" />
+        <TextBox x:Name="Login_text" HorizontalAlignment="Left" Height="23" Margin="135,269,0,0" TextWrapping="Wrap" Text="{Binding Path=Setlog, Mode=TwoWay}" VerticalAlignment="Top" Width="203" KeyDown="Window_KeyDown" />
+        <PasswordBox x:Name="Password_text" HorizontalAlignment="Left" Margin="135,310,0,0" VerticalAlignment="Top" Width="203" Height="22" PasswordChar="*" Password="" KeyDown="Window_KeyDown"/>
         <Button x:Name="Enter_Butt" Content="Enter" HorizontalAlignment="Left" Margin="70,386,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Height="25" Click="Enter_Butt_Click"/>
+        <CheckBox Content="Remember me" HorizontalAlignment="Left" Margin="135,337,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=SetRem, Mode=TwoWay}" />
         <Button x:Name="Cancel_Butt" Content="Cancel" HorizontalAlignment="Left" Margin="263,386,0,0" VerticalAlignment="Top" Width="75" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" BorderBrush="{x:Null}" Height="25" Click="Cancel_Butt_Click"/>
         <Button x:Name="Registrtion_Butt" Content="Registration" HorizontalAlignment="Left" Margin="150,386,0,0" VerticalAlignment="Top" Width="108"  BorderBrush="{x:Null}" Height="25" Click="Registrtion_Butt_Click" />
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="243,337,0,0" TextWrapping="Wrap" Text="Forgot Password?" VerticalAlignment="Top" TextDecorations="Underline" FontWeight="Medium" FontStyle="Italic" Foreground="#FF0010B2" MouseUp="textBlock_MouseUp" IsEnabled="{Binding ElementName=Login_text , Path=Text.Length}"/>

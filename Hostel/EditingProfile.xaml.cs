@@ -22,6 +22,7 @@ namespace Hostel
    public partial class EditingProfile:Window
    {
       public string NowLogin { get; set; }
+      public string NowPass { get; set; } = "";
       public EditingProfile( )
       {
          InitializeComponent( );
@@ -36,9 +37,13 @@ namespace Hostel
       {
          try
          {
-            if(RPass_TextBox.Text != Pass_TextBox.Text)
+            if(RPass_PassBox.Password != Pass_PassBox.Password)
             {
                MessageBox.Show("Passwords do not coincide!");
+            }
+            else if (Pass_PassBox.Password == "" || Pass_PassBox.Password == " ")
+            {
+               MessageBox.Show("Password field is empty");
             }
             else if(MessageBox.Show("Are you really " + NowLogin,"",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
@@ -48,11 +53,13 @@ namespace Hostel
                   string conStr = @" Data Source = DESKTOP-AIOOLC8\MSSQLSERV16JOHN; Initial Catalog=Account; Integrated Security=True;";
                   using(SqlConnection connectDb = new SqlConnection(conStr))
                   {
-                     string sql = "UPDATE Accounts SET Password = '" + Pass_TextBox.Text+"' WHERE Login = '"+NowLogin+"';" ;
+                     string sql = "UPDATE Accounts SET Password = '" + Pass_PassBox.Password+"' WHERE Login = '"+NowLogin+"';" ;
                      SqlCommand cmd = new SqlCommand(sql, connectDb);
                      cmd.CommandType = CommandType.Text;
                      connectDb.Open( );
                      cmd.ExecuteNonQuery( );
+                     MessageBox.Show("Password Changed");
+                     NowPass = Pass_PassBox.Password;
                      connectDb.Close( );
                   }
                }

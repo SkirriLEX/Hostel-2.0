@@ -20,6 +20,7 @@ namespace Hostel
    public partial class MainForm:Window
    {
       public bool allexit { get; set; } = true;//exit flag for allexit
+      public bool Dataconection { get; set; } = false;
      
       public MainForm( )
       {
@@ -31,15 +32,22 @@ namespace Hostel
          allexit = false;//exit flag
          Close( );
       }
-
       private void MI_Exit_Click(object sender,RoutedEventArgs e)//when we close program
       {
          Close( );
       }
 
-      private void Load_database_Click(object sender,RoutedEventArgs e)
+      private void QueryDb_Click(object sender,RoutedEventArgs e)
       {
-         
+         if(Dataconection)
+         {
+            QerrySelectorWindow qw = new QerrySelectorWindow();
+            qw.ShowDialog( );
+         }
+         else
+         {
+            MessageBox.Show("Please. Conected Database","Database not conected",MessageBoxButton.OK,MessageBoxImage.Hand);
+         }
       }
    }
 }

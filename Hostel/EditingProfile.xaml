@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="EditingProfile" Height="500" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" >
     <Grid>
-        <TextBox x:Name="Pass_TextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" Margin="141,214,0,0"/>
-        <TextBox x:Name="RPass_TextBox" HorizontalAlignment="Left" Height="23" Margin="141,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209"/>
+        <PasswordBox x:Name="Pass_PassBox" HorizontalAlignment="Left" Margin="141,213,0,0" VerticalAlignment="Top" PasswordChar="*" Height="23" Width="209"/>
+        <PasswordBox  x:Name="RPass_PassBox" HorizontalAlignment="Left" Margin="141,260,0,0" VerticalAlignment="Top" PasswordChar="*" Height="23" Width="209"/>
         <Label x:Name="RPass_Label" Content="Repeat Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,257,0,0"/>
         <Label x:Name="Pass_label" Content="Passoword" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,210,0,0" RenderTransformOrigin="0.026,0.277"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="89,63,0,0" TextWrapping="Wrap" Text="Password recovery &#10; For User :" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
